@@ -1,33 +1,20 @@
 import React from 'react';
+import AppBar from '@mui/material/AppBar';
+import Toolbar from '@mui/material/Toolbar';
+import Button from '@mui/material/Button';
+import { Link } from 'react-router-dom';
 
-const NavBar = () => {
+const Navbar = () => {
   return (
-    <nav style={styles.navBar}>
-      <div style={styles.brand}>Track My Workout</div>
-      <div style={styles.loginButton}>Login</div>
-    </nav>
+    <AppBar position="static" style={{ backgroundColor: 'transparent', boxShadow: 'none' }}>
+      <Toolbar>
+        <div style={{ flexGrow: 1 }}></div>
+        <Link to="/auth">
+          <Button variant="contained">Sign In</Button>
+        </Link>
+      </Toolbar>
+    </AppBar>
   );
 };
 
-const styles = {
-  navBar: {
-    display: 'flex',
-    justifyContent: 'space-between',
-    padding: '10px',
-    backgroundColor: '#333',
-    color: '#fff',
-  },
-  brand: {
-    fontSize: '1.5rem',
-    fontWeight: 'bold',
-  },
-  loginButton: {
-    cursor: 'pointer',
-    padding: '8px 16px',
-    backgroundColor: '#61dafb',
-    color: '#fff',
-    borderRadius: '4px',
-  },
-};
-
-export default NavBar;
+export default Navbar;
