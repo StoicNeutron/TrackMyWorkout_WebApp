@@ -2,9 +2,14 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
+import AuthNavbar from './components/AuthNavBar';
 
 const SignIn = ({ onToggle }) => {
   return (
+    <div>
+    <div>
+      <AuthNavbar/>
+    </div>
     <div style={styles.container}>
       <h2>Sign In</h2>
       <form style={{ width: '400px' }}>
@@ -22,6 +27,7 @@ const SignIn = ({ onToggle }) => {
       <p>
         Don't have an account? <Link to="#" onClick={onToggle}>Sign Up</Link>
       </p>
+    </div>
     </div>
   );
 };
@@ -62,6 +68,10 @@ const SignUp = ({ onToggle }) => {
   };
 
   return (
+    <div>
+    <div>
+      <AuthNavbar/>
+    </div>
     <div style={styles.container}>
       <h2>Sign Up</h2>
       <form style={{ width: '400px' }}>
@@ -81,6 +91,7 @@ const SignUp = ({ onToggle }) => {
       <p>
         Already have an account? <Link to="#" onClick={onToggle}>Sign In</Link>
       </p>
+    </div>
     </div>
   );
 };
