@@ -13,7 +13,7 @@ const SignIn = ({ onToggle }) => {
     <div style={styles.container}>
       <h2>Sign In</h2>
       <form style={{ width: '400px' }}>
-        <TextField label="Username" variant="outlined" margin="normal" fullWidth />
+        <TextField label="Email" variant="outlined" margin="normal" fullWidth />
         <TextField label="Password" type="password" variant="outlined" margin="normal" fullWidth />
         <Button
           variant="contained"
